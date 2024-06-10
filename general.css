@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Reddit+Mono:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+/*FONTS AT THE TOP*/
+
+html {
+  --class: rgb(142, 213, 249);
+  --text: rgb(205, 144, 119);
+  --p: rgb(10, 115, 36);
+  --div: rgb(158, 8, 70);
+  --a: rgb(233, 102, 104);
+  --header: rgb(225, 170, 33);
+  --background: rgb(31, 31, 31);
+  --numbers: rgb(103, 110, 120);
+  --div2: rgb(233, 97, 89);
+  --img: rgb(66, 144, 188);
+  --tag: rgb(110, 114, 104);
+}
+
+/*RESET MARGINS AND IMAGES*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*GENERAL CSS: P, H1, H2, A etc*/
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-weight: 500;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-size: 1rem;
+  padding: 1px;
+  margin-left: 32px;
+}
+
+p {
+  font-family: "Roboto Slab", serif;
+  color: white;
+  line-height: 1.42rem;
+}
+
+/*LAYOUT CSS*/
+
+header {
+  border-bottom: 2px solid;
+  background-color: #181818;
+}
+
+#index_header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#grid_1-1-1 {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#background_index {
+  background-image: url(images/background.png);
+}
+
+.home {
+  display: flex;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio {
+  display: flex;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  display: flex;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+}
+
+a:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+}
+
+/*MAIN PAGE MOBILE VERSION*/
+@media (max-width: 700px) {
+  #grid_1-1-1 {
+    display: block;
+  }
+
+  .portfolio {
+    position: absolute;
+    top: 37.5%;
+    left: 33%;
+    height: 9%;
+  }
+
+  .home {
+    position: absolute;
+    top: 9%;
+    left: 35%;
+    height: 9%;
+  }
+
+  .about {
+    position: absolute;
+    height: 9%;
+    top: 68%;
+    left: 31%;
+  }
+}
+
+/*MESSING AROUND WITH COLOURS*/
+
+.class_color {
+  color: var(--class);
+}
+
+.text_color {
+  color: var(--text);
+}
+
+.p_color {
+  color: var(--p);
+}
+
+.div_color {
+  color: var(--div);
+}
+
+.div2_color {
+  color: var(--div2);
+}
+
+.a_color {
+  color: var(--p);
+}
+
+.header_color {
+  color: var(--header);
+}
+
+.tag_color {
+  color: var(--tag);
+}
+
+.img_color {
+  color: var(--img);
+}
+
+/*PORTFOLIO PAGE*/
+
+#portfolio_links {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-left: 50px;
+}
+
+#portfolio_header {
+  margin-left: 50px;
+  padding: 25px 0 23px 0;
+}
+
+.portfolio_h2 {
+  margin-left: 30px;
+}
+
+#portfolio_main {
+  margin-left: 50px;
+  margin-right: 40px;
+}
+
+#portfolio_footer {
+  padding-top: 28px;
+  margin-left: 50px;
+}
+
+.divs {
+  display: block;
+  padding: 3px 0 2px 0;
+}
+
+.divs2 {
+  display: block;
+  padding: 0 0 0 35px;
+}
+
+.p_portfolio {
+  padding: 0 0 0 65px;
+}
+
+.a_tags {
+  padding: 0 0 0 30px;
+}
+
+.numbers2 {
+  display: none;
+}
+
+/*ABOUT ME PAGE*/
+
+#grid_1-1 {
+  display: grid;
+  grid-template-columns: 2% 98%;
+  background-color: var(--background);
+}
+
+#numbers p {
+  padding-left: 2px;
+  text-align: right;
+  color: var(--numbers);
+}
+
+img {
+  width: 50%;
+  padding: 10px 0 17px 0;
+}
+
+.about_p {
+  margin-left: 30px;
+}
+
+/*JAVA SCRIPT SECTION*/
+
+.pop_animation {
+  animation-name: pop_animation_kf;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes pop_animation_kf {
+  0% {
+    scale: 1;
+  }
+  30% {
+    scale: 1.1;
+    transform: rotate(360deg);
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*MOBILE PORTFOLIO PAGE*/
+@media (max-width: 700px) {
+  .divs {
+    display: none;
+  }
+
+  .divs2 {
+    padding: 0 0 0 20px;
+  }
+
+  .p_portfolio {
+    padding: 0 0 0 35px;
+  }
+
+  .numbers2 {
+    display: block;
+  }
+
+  #portfolio_links {
+    margin-left: 0px;
+  }
+
+  #portfolio_footer {
+    padding-top: 48px;
+    margin-left: 20px;
+  }
+
+  #portfolio_header {
+    padding: 0 0 21px 0;
+    margin-left: 20px;
+  }
+
+  #portfolio_main {
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+
+  h2 {
+    line-height: 20px;
+  }
+
+  .a_tags {
+    padding: 2px 0 1px 0px;
+  }
+
+  .about_p {
+    margin-left: 10px;
+  }
+}
